@@ -1,29 +1,34 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <NoWarn>FS3261</NoWarn>
 
     <PackageId>NubeFiscal.Efos</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>NubeFiscal</Authors>
     <Description>Cliente .NET para consultar el listado 69-B (EFOS) del SAT, servido como JSON desde GitHub Pages con actualizacion diaria automatica.</Description>
     <PackageTags>sat;cfdi;efos;69b;mexico;fiscal;nubefiscal;fsharp</PackageTags>
     <RepositoryUrl>https://github.com/nubefiscal/efos-mx</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Models.fs" />
-    <Compile Include="EfosClient.fs" />
-    <Compile Include="ServiceCollectionExtensions.fs" />
+    <None Include="README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <Compile Include="Models\Models.fs" />
+    <Compile Include="Client\EfosClient.fs" />
+    <Compile Include="Client\ServiceCollectionExtensions.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.0" />
   </ItemGroup>
 
 </Project>
