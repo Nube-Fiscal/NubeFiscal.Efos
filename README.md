@@ -51,4 +51,4 @@ diariamente a JSON por [efos-mx](https://github.com/Nube-Fiscal/efos-mx).
 
 ## Licencia
 
-MIT © [NubeFiscal](https://nubefiscal.com)
+MIT © [Nube Fiscal](https://nubefiscal.com.mx)
